@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> JS FUNCTION</h4>
+    <p>  JS function is a block of code that 
+        carry out a particular task or instruction</p>
+
+        <div>
+            A js function is defined   with the keyword "function"
+            followed by a name of your choice. 
+            
+            <ul>
+                <li>function names can contain letters ,
+                    digits , underscore, or dollar sign 
+                </li>
+                <li>
+                    the parentheses or bracket  mayh have optional parameters
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            function get_result(){
+                //code to execute
+                let x = 5;
+                let y = 8;
+                let z = x+ y;
+                return z;
+            }
+
+
+            function get_balance(x, y){
+                let z;
+               z = x + y;
+               console.log(z);
+            }
+
+            //Function Invocation
+            //the code inside the function will only execute 
+           // when something invokes or triggers
+           // 1- when an event occurs: i.e when a user clickc on a button
+           //2 - Automatically (self invoked)
+
+            //Function Return
+           // when a js reaches a return keyword , the function
+           // stops executing
+
+           function myFunction(a, b){
+            return a* b;
+           }
+
+           let result = myFunction(8, 10);
+           let result_2 = myFunction(4,6);
+
+           console.log(result);
+           console.log(result_2);
+           console.log(myFunction(10,10));
+           console.log(get_result(5,7));
+        </script>
+</body>
+</html>
