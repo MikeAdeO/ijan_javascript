@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>JAVASCRIPT EVENTS</h4>
+         1 = An HTML web page has finished loading 
+         2 = AN HTML input field just changed
+         3 - AN HTML buton was clicked <br>
+         <button onclick="document.getElementById('demo').innerHTML = Date()">The Time is "?</button>
+
+         <h1 id="demo"></h1>
+
+         <div>
+
+            <a href="#" onmouseover="displayDate()">CHECK TIME NOW!</a>
+            <h2 id="demo_2"></h2>
+         </div>
+
+         <ul>
+            <li>onChange : if an HTML elemnt is changed </li>
+            <li>onClick : if a user clicks an HTML element</li>
+            <li>onmouseover: if the user mouse  moves over the html elemnt</li>
+            <li>onmouseout if the user moves the mouse away from the html </li>
+            <li>onkeydown if the user pushes a keyboarf key</li>
+            <li>onload :when the browser has finished loading</li>
+         </ul>
+    </div>
+
+    <h4> Javascript Event Handlers</h4>
+    <p> Event handlers can be used to handle and 
+        verify user inputs , user actions
+         and browser actions</p>
+
+         1 - Things that should be doen every time a page loads <br>
+         2 - Things that should be done when the page is closed 
+
+    <h4>Methods used to let js  work with events</h4>
+    <ul>
+        <li>HTML EVENTS attributes can execute js code directyl</li>
+        <li>html events  can call js functions</li>
+        <li>you can assign your own events handler functions to html </li>
+        <li> you can also prevednts events from beinf sent or being handled</li>
+    </ul>
+
+
+    <!-- <form onsubmit="submitUserForm()">
+        <label>USER NAME</label>
+        <input value="" placeholder="user name" />
+        <button>SUBMIT</button>
+    </form> -->
+
+    <input type="text"  onfocus="highlightInput(this)">
+    <button type="submit">SUBMIT</button>
+    <script>
+            function displayDate(){
+                document.getElementById("demo_2").innerHTML = Date();
+            }
+
+            function submitUserForm(){
+                alert("HELLO, the form has been sub mittecdc");
+            }
+
+            function highlightInput(ayo){
+                ayo.style.background = "purple";
+            }
+
+
+    </script>
+</body>
+</html>

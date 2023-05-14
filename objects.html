@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>Javascript Objects</h4>
+        <p>Nigeria</p>
+        <ul>
+            <li>Oyo</li>
+            <li>Lagos</li>
+            <li>Kano</li>
+            <li>PH</li>
+        </ul>
+
+        <!-- Object  methods -->
+         A object method is a function stored as a property.
+    </div>
+
+    <script>
+        let car = {
+            model : "BEnz",
+            color: "red",
+            year: 2022
+        };
+
+        let Buhari = {
+            height: "15f",
+            skin: "brown",
+            hobbies: "football"
+        }
+
+        console.log(car);
+        console.log(Buhari.height);
+        console.log(car["model"]);
+
+        //ObjectName.properties
+        //objectName["propertyName"]
+
+        const President = {
+            firstName : "Mojisola",
+            lastName : "Akanbi",
+            school: "UNIPORT",
+            age: 78,
+          //  fullName : function() {
+            //   let full_name =  this.firstName + " " + this.lastName;
+
+             //  return full_name;
+           // }
+        }
+
+        let full_name = President.firstName + " " + President.lastName;
+
+        console.log(President);
+        console.log(full_name);
+    </script>
+</body>
+</html>
