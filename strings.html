@@ -23,6 +23,26 @@
         <li>\n - New Line</li>
         <li>\r - Carriage return</li>
     </ul>
+
+    <!-- JS STRINGS METHODS -->
+    <ul>
+        <li>length</li>
+        <li>slice()</li>
+        <li>substring()</li>
+        <li>replace()</li>
+        <li>replaceAll()</li>
+        <li>toUpperCase()</li>
+        <li>toLowerCase()</li>
+        <li>concat()</li>
+        <li>trim()</li>
+        <li>trimStart()</li>
+        <li>trimEnd()</li>
+        <li>padStart()</li>
+        <li>padEnd()</li>
+        <li>charAt()</li>
+        <li>charCodeAt()</li>
+        <li>split()</li>
+    </ul>
     
     <script>
         let name = "AYO";
@@ -39,6 +59,66 @@
 
         console.log(message);
         
+//SLICE
+let fruits = "Apple , Banana, mango";
+let part = fruits.slice(7, 13);
+let part_2 = fruits.slice(7);
+console.log(part);
+console.log(part_2);
+
+//subString()
+let ijan_string = "Apple , Banana, mango";
+let ijan_part = ijan_string.substring(7, 13);
+let ijan_part_2 = ijan_string.substring(7);
+console.log(ijan_part);
+console.log(ijan_part_2);
+
+// replace
+let message_2 = "Hello class";
+let newText = "Hello ijan";
+console.log(message_2);
+let result_1 = message_2.replace("class", "James");
+console.log(result_1);
+
+
+
+//ReplaceAll
+let sentence = " I love cats, Cats are very beautiful animals. Cats are very popular";
+console.log(sentence);
+
+ sentence= sentence.replaceAll(/Cats/g, "Dogs");
+ sentence = sentence.replaceAll(/cats/g, "dogs");
+
+console.log(sentence);
+
+// toUpperCase
+
+let text1  = 'hello everyone, my name is mike';
+console.log(text1);
+let text2 = text1.toUpperCase()
+
+console.log(text2);
+
+//toLowerCase
+let text3 = "HELLO EVERYONE YOURE MOST WELCOMED";
+console.log(text3);
+
+let text4 = text3.toLowerCase();
+console.log(text4);
+
+//Concat
+// the concat() method can be used insted of the plus + operator to combine two strings together 
+
+let my_message = "Hello" + " " + "Nigeria"
+console.log(my_message);
+
+let my_1 = "Hello";
+let my_2 = "Hilda";
+
+let result_8 = my_1.concat(" ", my_2);
+
+console.log(result_8);
+
 
        
 
