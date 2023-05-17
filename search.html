@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>JAVASCRIPT STRING SEARCH</h4>
+        <ul>
+            <li>String indexOf()</li>
+            <li>String lastIndexOf()</li>
+            <li>String search()</li>
+            <li>String match()</li>
+            <li>String matchAll()</li>
+            <li>String includes()</li>
+            <li>String startsWith()</li>
+            <li>String endsWith()</li>
+        </ul>
+
+        <h4>IndexOf()</h4>
+
+        <script>
+            let text = "Please who is Nigeria President";
+
+            let result = text.indexOf("Nigeria");
+
+            console.log(result);
+
+
+
+            let text_2 = "Nigeria is a country of many people";
+            let result_2 = text_2.search("people");
+
+            console.log(result_2);
+
+
+            let text_3 = "I like buhari, but he messed up big time";
+
+            let result_3 = text_3.includes("Tinubu");
+            let result_4 = text_3.includes("buhari");
+
+            console.log("Tinubu:", result_3);
+            console.log("Buhari:" , result_4);
+        </script>
+    </div>
+</body>
+</html>
