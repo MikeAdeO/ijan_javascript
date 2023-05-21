@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAYS</h1>
+    <script>
+        let car1 = "Volvo";
+        let car2 = "Toyota";
+        let car3 = "Benz";
+        let car4 = "ford";
+
+        let cars = ["volvo", "toyota", "benz", "ford"];
+        console.log(cars);
+
+        //let schools = new array();
+        //let items = [];
+        let car_count = cars.length
+        console.log(car_count);
+
+       //POP - it is used to remove the last item of an array
+       cars.pop();
+       console.log(cars);
+       // alert(cars);
+
+       //PUSH - it is used to add item to an array
+       cars.push("Nissan", "Almera", "Tacoma");
+       console.log(cars);
+
+       //UNSHIFT
+       cars.unshift("Nord");
+       console.log(cars);
+
+       //Converting an array to a string
+     let result =  cars.toString();
+       console.log("result",result);
+
+       //Array
+       const person = ["John", "James",  78];
+
+        console.log(person);
+        //OBJECT
+
+        const person_2 = {
+            first_name : "JAMES",
+            last_name : "Ayo",
+            age: 89
+        };
+
+        console.log(person_2);
+
+
+        //LOOP 
+
+        const fruits = [
+        1, 2,3,4,5,6,7,8,9,10
+        ];
+
+        let fruits_count = fruits.length;
+         for(let i = 0; i< fruits_count; i++ ){
+           let x = 2 * i ;
+           console.log(x);
+         }
+
+
+         //ASSOCIATIVE ARRAYS
+
+         const mySelf = [];
+         mySelf["first_name"] =  "Omolola",
+         mySelf["last_name"] = "JOudu";
+         mySelf['age'] = 90;
+
+         console.log(mySelf);
+
+         console.log(mySelf['last_name']);
+
+//
+
+const points = new Array(40, 67, 89, 800);
+
+const points_2 = [50, 70, 89, 890];
+console.log(points);
+console.log(points_2);
+
+
+//Array Methods
+//slice, lenght, pop, push , unshift, shift
+
+let item_1 = [ 1,2, 3,4 ,5];
+let item_2 = [ 6, 7, 8, 9, 10];
+ let result_2 = item_1.concat(item_2);
+
+ console.log(result_2);
+function james(){
+    console.log(4);
+}
+
+
+
+ //forEach
+ let  names = ["Bimbo", "Shola", "Bolu", "wale"];
+         
+ names.forEach((item) => {
+    console.log(`Good morning ${item} , hope you had a nice day?`);
+ })
+
+
+ //Searchng through an array
+
+ //includes
+
+
+ let item_3 = ["pawpaw", "orange", "Yam", "pawpaw"];
+
+ console.log(item_3.indexOf('pawpaw'));
+ console.log(item_3.lastIndexOf("pawpaw"));
+
+
+ //Filter
+ let users_1 = [
+    {
+        id: 1,
+        name: "james",
+        email: "james@gmail.com",
+        bank_name: "GTB",
+        bank_account: "0123456789"
+    },
+    {
+        id: 2,
+        name: "kola",
+        email: "kola@gmail.com",
+        bank_name: "UBA",
+        bank_account: "0623456789"
+    },
+    {
+        id: 3,
+        name: "Ngozi",
+        email: "ngozi@gmail.com",
+        bank_name: "JAIZ",
+        bank_account: "8123456789"
+    },
+    {
+        id: 4,
+        name: "Ahmed",
+        email: "ahmed@gmail.com",
+        bank_name: "Providus",
+        bank_account: "9123456789"
+    },
+    {
+        id: 5,
+        name: "Ben",
+        email: "ben@gmail.com",
+        bank_name: "Zenith",
+        bank_account: "8123456789"
+    }
+
+
+   
+    
+ ];
+
+
+ let result_9 = users_1.filter(item => item.id < 2 );
+
+// let result_10 = users_1.includes((item) => {
+  //  console.log(item);
+ //});
+ const searchIndex = users_1.findIndex((item) => item.bank_name == "JAIZ");
+
+ console.log(searchIndex);
+
+
+ const searchIndex_2 =users_1.find((item_1) => item_1.bank_account == "9123456789");
+ console.log(searchIndex_2);
+ 
+ //console.log(result_9.length);
+
+ //filter
+ let numbers = [ 1, 2,3, 4, 5,6 ,7,8,9,10];
+ function checkEvenNumber(number){
+    if(number %  2 != 0){
+        return true;
+    }else{
+        return false;
+    }
+ }
+
+ let evenNumbers = numbers.filter(checkEvenNumber);
+ console.log(evenNumbers);
+
+
+
+ const prices = [ 1800, 2000, null, 3000, 5000, "Thousand", 500];
+
+ function checkPrice(element){
+    return element > 2000 && !Number.isNaN(element);
+ }
+
+ let filteredPrices = prices.filter(checkPrice);
+ console.log(filteredPrices);
+
+
+ //ARROW FUNCTION
+ let newPrices = prices.filter((price) =>(
+    price > 2000 & !Number.isNaN(price)
+ ) );
+
+ console.log(newPrices);
+
+///SEARCHING IN ARRAY
+const languages = ["Javascript", "Python", "Ruby", "C", "C++", "PHP", "Java"];
+
+ function searchFor(arr, query){
+    function condition(element){
+        return element.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    }
+
+    return arr.filter(condition);
+ }
+
+ let newArr = searchFor(languages, "p");
+ console.log(newArr);
+
+ //ARROW FUNCTION
+
+ const searchArr = (arr, query) =>arr.filter(bash => bash.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+
+
+ let newLanguages = searchArr(languages, "c");
+ console.log( newLanguages);
+
+      
+    </script>
+</body>
+</html>
