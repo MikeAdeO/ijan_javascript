@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="my__form" method="post" onsubmit="return validateForm()">
+        <label>NAME:</label>
+        <input type="text" name="user_name" value=""><br><br>
+
+        <label>PASSWORD</label>
+        <input type="password" name="user_password" value=""><br><br>
+
+        <label> CONFIRM PASSWORD</label>
+        <input type="password" name="confirm__password" value="">
+
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm(){
+            let user_name = document.my__form.user_name.value;
+            let password = document.my__form.user_password.value;
+            let confirm__password = document.my__form.confirm__password.value;
+
+            if(user_name == "" || password == ""){
+                alert("Name cannot be empty");
+                return false;
+            }else if(password.length < 6){
+                alert("Password cannot be less 6");
+                return false;
+            }else if (password !==confirm__password ){
+                alert("password does not match your confirm password");
+                return false;
+            }else{
+                    alert("GOOD JOB, form submited");
+
+                    return true;
+            }
+        }
+    </script>
+</body>
+</html>

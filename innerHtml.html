@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> JS INNER HTML</h4>
+    <form name="myForm">
+        <input type="button" value="comment" onclick="show_comment_form()">
+        <div id="my_location"></div>
+    </form>
+
+
+    <br>
+    <h4>INNER TEXT</h4>
+    <form name="myForm__2">
+        <input type="password" value="" name="user__password" onkeyup="validate()">
+        <span id="password__strength"></span>
+    </form>
+    <script>
+        function show_comment_form(){
+            let data = "Name: <input type='text' name='name'><br>Comment: <br> <textarea rows='5' cols='4'> </textarea><br><input type='submit' value='post comment'>";
+            document.getElementById("my_location").innerHTML=data;
+        }
+
+        function validate(){
+            let message;
+            let password_count = document.myForm__2.user__password.value.length;
+            if(password_count > 5){
+                message = "GOOD";
+            }else{
+                message = "password is too short"
+            }
+
+            document.getElementById("password__strength").innerText=message;
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>

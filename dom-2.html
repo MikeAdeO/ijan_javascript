@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <button onclick="countTags()">COUNT TAGS</button>
+
+  <!-- <form name="form1">
+    <label>Enter your name</label>
+    <input type="text" name="ijan__name" value="" />
+    <button type="button" onclick="printValue()">PRINT VALUE</button>
+    <input type="button" onclick="printValue()" value="print name" />
+    
+
+  </form> -->
+
+
+  <!-- SECONF FORM -->
+  <!-- <form>
+    <input type="number" id="ijan__number" name="ijan__number" value="" />
+    <br>
+    <button type="button" onclick="getCube()">CUBE</button>
+  </form> -->
+
+  <form>
+    <label>MALE</label>
+    <input  type="radio" name="gender" value="male">
+    <label>FEMALE</label>
+    <input type="radio" name="gender" value="female">
+    <label>BOTH</label>
+    <input type="radio" name="gender" value="female">
+    <button type="button" onclick="totalElements()">Total Gender</button>
+  </form>
+    <script>
+        function printValue(){
+            let name = document.form1.ijan__name.value;
+            alert("Welcome:" +name);
+        }
+
+
+        function getCube(){
+            let number = document.getElementById("ijan__number").value;
+            let result = number * number ;
+
+            alert(result);
+        }
+
+        function totalElements(){
+            let allgenders = document.getElementsByName("gender");
+            result = "Total Gender:"+allgenders.length;
+
+            alert(result);
+        }
+
+        function countTags(){
+            let total_p_tags = document.getElementsByTagName("p");
+           let result = total_p_tags.length;
+           alert(result);
+        }
+    </script>
+</body>
+</html>
