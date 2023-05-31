@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <div>
+        <form name="myForm" method="post" action="#"  onsubmit="return validateEmail();">
+            <label>Email</label>
+            <input  name="email">
+            <button type="submit">REGISTER</button>
+
+        </form>
+    </div>
+    <script>
+        function validateEmail(){
+            let x = document.myForm.email.value;
+            console.log(x);
+            let at_position = x.indexOf("@"); // yhdh@james.com
+            let dot_position = x.lastIndexOf(".");
+
+            if(at_position < 1 || dot_position <at_position+2 || dot_position+2 >x.length){
+
+                alert("pLease enter a valid email");
+                return false;
+                }else{
+                    alert("proper email");
+                    return false;
+                }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE VALIDATIOn</title>
+</head>
+<body>
+    <form>
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="validateImage()">validate Image</button>
+        <div id="imageError"></div>
+    </form>
+
+    <script>
+        function validateImage(){
+            var fileInput = document.getElementById("imageInput");
+            var file = fileInput.files[0];
+
+          /
+
+            if(file){
+                var img = new Image();
+
+                if(img.onload){
+                    alert("valid image")
+                }else{
+                    alert("invalid image")
+                }
+
+               // img.onload = function() {
+                    //send image to backend
+                 //   alert("valid image")
+                   
+               // }
+
+                //img.onerror = function() {
+                    //invalid image
+
+                 //   alert("Invcalid image format");
+                   // imageError.innerHTML = "Invalid image format"; 
+
+                //}
+
+            //    img.src = URL.createObjectURL(file);
+            }
+        }
+    </script>
+</body>
+</html>

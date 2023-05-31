@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .danger{
+            font-weight:900;
+            font-size: 24px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form name="myForm" onsubmit="return ijan__validate();">
+        <input type="text" name="num">
+        <span id="numloc" class="danger"></span> <br>
+        <button type="submit">SUBMIT</button>
+    </form>
+    <script>
+        function ijan__validate(){
+            let user_input = document.myForm.num.value;
+          //  console.log()
+
+            if(isNaN(user_input)){
+                document.getElementById("numloc").innerHTML = "Enter a numeric number";
+
+                return false;
+            }else{
+                alert("GOOD JIB");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
